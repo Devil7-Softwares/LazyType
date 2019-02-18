@@ -24,18 +24,18 @@ Partial Class frm_Main
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_Main))
-        Dim SuperToolTip1 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-        Dim ToolTipTitleItem1 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-        Dim ToolTipItem1 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-        Dim SuperToolTip2 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-        Dim ToolTipTitleItem2 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-        Dim ToolTipItem2 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-        Dim SuperToolTip3 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-        Dim ToolTipTitleItem3 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-        Dim ToolTipItem3 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
         Dim SuperToolTip4 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
         Dim ToolTipTitleItem4 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
         Dim ToolTipItem4 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+        Dim SuperToolTip8 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+        Dim ToolTipTitleItem8 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+        Dim ToolTipItem8 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+        Dim SuperToolTip9 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+        Dim ToolTipTitleItem9 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+        Dim ToolTipItem9 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+        Dim SuperToolTip7 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+        Dim ToolTipTitleItem7 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+        Dim ToolTipItem7 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
         Me.BarManager1 = New DevExpress.XtraBars.BarManager(Me.components)
         Me.Bar2 = New DevExpress.XtraBars.Bar()
         Me.btn_Start = New DevExpress.XtraBars.BarLargeButtonItem()
@@ -45,6 +45,8 @@ Partial Class frm_Main
         Me.txt_Wait = New DevExpress.XtraBars.BarEditItem()
         Me.RepositoryItemSpinEdit2 = New DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit()
         Me.btn_IgnoreSpaces = New DevExpress.XtraBars.BarToggleSwitchItem()
+        Me.btn_PasteExcel = New DevExpress.XtraBars.BarLargeButtonItem()
+        Me.btn_EditFormats = New DevExpress.XtraBars.BarLargeButtonItem()
         Me.Bar3 = New DevExpress.XtraBars.Bar()
         Me.prog_Status = New DevExpress.XtraBars.BarEditItem()
         Me.RepositoryItemProgressBar1 = New DevExpress.XtraEditors.Repository.RepositoryItemProgressBar()
@@ -74,9 +76,9 @@ Partial Class frm_Main
         Me.BarManager1.DockControls.Add(Me.barDockControlLeft)
         Me.BarManager1.DockControls.Add(Me.barDockControlRight)
         Me.BarManager1.Form = Me
-        Me.BarManager1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.btn_Start, Me.btn_Stop, Me.txt_Interval, Me.txt_Wait, Me.prog_Status, Me.btn_IgnoreSpaces})
+        Me.BarManager1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.btn_Start, Me.btn_Stop, Me.txt_Interval, Me.txt_Wait, Me.prog_Status, Me.btn_IgnoreSpaces, Me.btn_PasteExcel, Me.btn_EditFormats})
         Me.BarManager1.MainMenu = Me.Bar2
-        Me.BarManager1.MaxItemId = 10
+        Me.BarManager1.MaxItemId = 13
         Me.BarManager1.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemTextEdit1, Me.RepositoryItemSpinEdit1, Me.RepositoryItemTextEdit2, Me.RepositoryItemSpinEdit2, Me.RepositoryItemProgressBar1})
         Me.BarManager1.StatusBar = Me.Bar3
         '
@@ -86,7 +88,7 @@ Partial Class frm_Main
         Me.Bar2.DockCol = 0
         Me.Bar2.DockRow = 0
         Me.Bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top
-        Me.Bar2.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.btn_Start), New DevExpress.XtraBars.LinkPersistInfo(Me.btn_Stop), New DevExpress.XtraBars.LinkPersistInfo(Me.txt_Interval, True), New DevExpress.XtraBars.LinkPersistInfo(Me.txt_Wait), New DevExpress.XtraBars.LinkPersistInfo(Me.btn_IgnoreSpaces, True)})
+        Me.Bar2.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.btn_Start), New DevExpress.XtraBars.LinkPersistInfo(Me.btn_Stop), New DevExpress.XtraBars.LinkPersistInfo(Me.txt_Interval, True), New DevExpress.XtraBars.LinkPersistInfo(Me.txt_Wait), New DevExpress.XtraBars.LinkPersistInfo(Me.btn_IgnoreSpaces, True), New DevExpress.XtraBars.LinkPersistInfo(Me.btn_PasteExcel, True), New DevExpress.XtraBars.LinkPersistInfo(Me.btn_EditFormats)})
         Me.Bar2.OptionsBar.AllowQuickCustomization = False
         Me.Bar2.OptionsBar.DrawDragBorder = False
         Me.Bar2.OptionsBar.UseWholeRow = True
@@ -101,12 +103,12 @@ Partial Class frm_Main
         Me.btn_Start.ImageOptions.Image = CType(resources.GetObject("btn_Start.ImageOptions.Image"), System.Drawing.Image)
         Me.btn_Start.Name = "btn_Start"
         Me.btn_Start.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph
-        ToolTipTitleItem1.Text = "Start"
-        ToolTipItem1.LeftIndent = 6
-        ToolTipItem1.Text = "Start the Typing Process"
-        SuperToolTip1.Items.Add(ToolTipTitleItem1)
-        SuperToolTip1.Items.Add(ToolTipItem1)
-        Me.btn_Start.SuperTip = SuperToolTip1
+        ToolTipTitleItem4.Text = "Start"
+        ToolTipItem4.LeftIndent = 6
+        ToolTipItem4.Text = "Start the Typing Process"
+        SuperToolTip4.Items.Add(ToolTipTitleItem4)
+        SuperToolTip4.Items.Add(ToolTipItem4)
+        Me.btn_Start.SuperTip = SuperToolTip4
         '
         'btn_Stop
         '
@@ -117,12 +119,12 @@ Partial Class frm_Main
         Me.btn_Stop.ImageOptions.Image = CType(resources.GetObject("btn_Stop.ImageOptions.Image"), System.Drawing.Image)
         Me.btn_Stop.Name = "btn_Stop"
         Me.btn_Stop.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph
-        ToolTipTitleItem2.Text = "Stop"
-        ToolTipItem2.LeftIndent = 6
-        ToolTipItem2.Text = "Stop the Typing Process"
-        SuperToolTip2.Items.Add(ToolTipTitleItem2)
-        SuperToolTip2.Items.Add(ToolTipItem2)
-        Me.btn_Stop.SuperTip = SuperToolTip2
+        ToolTipTitleItem8.Text = "Stop"
+        ToolTipItem8.LeftIndent = 6
+        ToolTipItem8.Text = "Stop the Typing Process"
+        SuperToolTip8.Items.Add(ToolTipTitleItem8)
+        SuperToolTip8.Items.Add(ToolTipItem8)
+        Me.btn_Stop.SuperTip = SuperToolTip8
         '
         'txt_Interval
         '
@@ -132,13 +134,13 @@ Partial Class frm_Main
         Me.txt_Interval.Id = 4
         Me.txt_Interval.Name = "txt_Interval"
         Me.txt_Interval.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph
-        ToolTipTitleItem3.Text = "Interval"
-        ToolTipItem3.LeftIndent = 6
-        ToolTipItem3.Text = "The Interval Between Entering Charecters in Milliseconds (1000 Milliseconds = 1 S" &
+        ToolTipTitleItem9.Text = "Interval"
+        ToolTipItem9.LeftIndent = 6
+        ToolTipItem9.Text = "The Interval Between Entering Charecters in Milliseconds (1000 Milliseconds = 1 S" &
     "econd)"
-        SuperToolTip3.Items.Add(ToolTipTitleItem3)
-        SuperToolTip3.Items.Add(ToolTipItem3)
-        Me.txt_Interval.SuperTip = SuperToolTip3
+        SuperToolTip9.Items.Add(ToolTipTitleItem9)
+        SuperToolTip9.Items.Add(ToolTipItem9)
+        Me.txt_Interval.SuperTip = SuperToolTip9
         '
         'RepositoryItemSpinEdit1
         '
@@ -156,12 +158,12 @@ Partial Class frm_Main
         Me.txt_Wait.Id = 6
         Me.txt_Wait.Name = "txt_Wait"
         Me.txt_Wait.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph
-        ToolTipTitleItem4.Text = "Initial Wait"
-        ToolTipItem4.LeftIndent = 6
-        ToolTipItem4.Text = "Seconds to Wait After Clicking the Start Button"
-        SuperToolTip4.Items.Add(ToolTipTitleItem4)
-        SuperToolTip4.Items.Add(ToolTipItem4)
-        Me.txt_Wait.SuperTip = SuperToolTip4
+        ToolTipTitleItem7.Text = "Initial Wait"
+        ToolTipItem7.LeftIndent = 6
+        ToolTipItem7.Text = "Seconds to Wait After Clicking the Start Button"
+        SuperToolTip7.Items.Add(ToolTipTitleItem7)
+        SuperToolTip7.Items.Add(ToolTipItem7)
+        Me.txt_Wait.SuperTip = SuperToolTip7
         '
         'RepositoryItemSpinEdit2
         '
@@ -176,6 +178,24 @@ Partial Class frm_Main
         Me.btn_IgnoreSpaces.Caption = "Ignore Spaces"
         Me.btn_IgnoreSpaces.Id = 9
         Me.btn_IgnoreSpaces.Name = "btn_IgnoreSpaces"
+        '
+        'btn_PasteExcel
+        '
+        Me.btn_PasteExcel.Caption = "Paste Excel Data"
+        Me.btn_PasteExcel.CaptionAlignment = DevExpress.XtraBars.BarItemCaptionAlignment.Right
+        Me.btn_PasteExcel.Id = 11
+        Me.btn_PasteExcel.ImageOptions.Image = CType(resources.GetObject("btn_PasteExcel.ImageOptions.Image"), System.Drawing.Image)
+        Me.btn_PasteExcel.Name = "btn_PasteExcel"
+        Me.btn_PasteExcel.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph
+        '
+        'btn_EditFormats
+        '
+        Me.btn_EditFormats.Caption = "Edit Formats"
+        Me.btn_EditFormats.CaptionAlignment = DevExpress.XtraBars.BarItemCaptionAlignment.Right
+        Me.btn_EditFormats.Id = 12
+        Me.btn_EditFormats.ImageOptions.Image = CType(resources.GetObject("btn_EditFormats.ImageOptions.Image"), System.Drawing.Image)
+        Me.btn_EditFormats.Name = "btn_EditFormats"
+        Me.btn_EditFormats.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph
         '
         'Bar3
         '
@@ -209,7 +229,7 @@ Partial Class frm_Main
         Me.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top
         Me.barDockControlTop.Location = New System.Drawing.Point(0, 0)
         Me.barDockControlTop.Manager = Me.BarManager1
-        Me.barDockControlTop.Size = New System.Drawing.Size(634, 40)
+        Me.barDockControlTop.Size = New System.Drawing.Size(890, 40)
         '
         'barDockControlBottom
         '
@@ -217,7 +237,7 @@ Partial Class frm_Main
         Me.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.barDockControlBottom.Location = New System.Drawing.Point(0, 243)
         Me.barDockControlBottom.Manager = Me.BarManager1
-        Me.barDockControlBottom.Size = New System.Drawing.Size(634, 25)
+        Me.barDockControlBottom.Size = New System.Drawing.Size(890, 25)
         '
         'barDockControlLeft
         '
@@ -231,7 +251,7 @@ Partial Class frm_Main
         '
         Me.barDockControlRight.CausesValidation = False
         Me.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right
-        Me.barDockControlRight.Location = New System.Drawing.Point(634, 40)
+        Me.barDockControlRight.Location = New System.Drawing.Point(890, 40)
         Me.barDockControlRight.Manager = Me.BarManager1
         Me.barDockControlRight.Size = New System.Drawing.Size(0, 203)
         '
@@ -251,7 +271,7 @@ Partial Class frm_Main
         Me.txt_Text.Location = New System.Drawing.Point(0, 40)
         Me.txt_Text.MenuManager = Me.BarManager1
         Me.txt_Text.Name = "txt_Text"
-        Me.txt_Text.Size = New System.Drawing.Size(634, 203)
+        Me.txt_Text.Size = New System.Drawing.Size(890, 203)
         Me.txt_Text.TabIndex = 4
         '
         'TypeTimer
@@ -265,7 +285,7 @@ Partial Class frm_Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(634, 268)
+        Me.ClientSize = New System.Drawing.Size(890, 268)
         Me.Controls.Add(Me.txt_Text)
         Me.Controls.Add(Me.barDockControlLeft)
         Me.Controls.Add(Me.barDockControlRight)
@@ -307,4 +327,6 @@ Partial Class frm_Main
     Friend WithEvents TypeTimer As Timer
     Friend WithEvents WaitTimer As Timer
     Friend WithEvents btn_IgnoreSpaces As DevExpress.XtraBars.BarToggleSwitchItem
+    Friend WithEvents btn_PasteExcel As DevExpress.XtraBars.BarLargeButtonItem
+    Friend WithEvents btn_EditFormats As DevExpress.XtraBars.BarLargeButtonItem
 End Class

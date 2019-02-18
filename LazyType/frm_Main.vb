@@ -1,4 +1,7 @@
-﻿Public Class frm_Main
+﻿Imports System.IO
+Imports System.Xml
+
+Public Class frm_Main
 
 #Region "Variables"
     Dim WaitSeconds As Integer = 0
@@ -39,6 +42,43 @@
     End Sub
 #End Region
 
+#Region "Functions"
+    Private Function ReadXMLSpreadSheet() As String
+        Dim R As String = ""
+        Using MS As MemoryStream = CType(Clipboard.GetData("XML Spreadsheet"), MemoryStream)
+            If MS IsNot Nothing Then
+                Dim Document As New XmlDocument
+                Document.Load(MS)
+
+                For Each Row As XmlNode In Document.GetElementsByTagName("Row")
+                    Dim RowString As String = ""
+                    For Each Cell As XmlNode In Row.ChildNodes
+                        If Cell.Name = "Cell" Then
+                            For Each Data As XmlNode In Cell.ChildNodes
+                                If Data.Name = "Data" Then
+                                    Dim Type As String = Data.Attributes.GetNamedItem("ss:Type").Value
+                                    Dim Value As String = Nothing
+                                    If Type = "String" Then
+                                        Value = Data.InnerText
+                                    ElseIf Type = "DateTime" Then
+                                        Value = Date.Parse(Data.InnerText).ToString(My.Settings.DateFormat)
+                                    ElseIf Type = "Number" Then
+                                        Value = CDbl(Data.InnerText).ToString(My.Settings.NumberFormat)
+                                    End If
+
+                                    If Value IsNot Nothing Then RowString &= If(RowString = "", "", vbTab) & Value
+                                End If
+                            Next
+                        End If
+                    Next
+                    R &= If(R = "", "", vbNewLine) & RowString
+                Next
+            End If
+        End Using
+        Return R
+    End Function
+#End Region
+
 #Region "Form Events"
     Private Sub frm_Main_Load(sender As Object, e As EventArgs) Handles Me.Load
         txt_Interval.EditValue = My.Settings.Interval
@@ -65,6 +105,20 @@
         WaitTimer.Stop()
         EnableControls()
         frm_Count.Close()
+    End Sub
+    Private Sub btn_PasteExcel_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btn_PasteExcel.ItemClick
+        If My.Computer.Keyboard.CtrlKeyDown Then
+            Using MS As MemoryStream = CType(Clipboard.GetData("XML Spreadsheet"), MemoryStream)
+                If MS IsNot Nothing Then txt_Text.Text = System.Text.Encoding.UTF8.GetString(MS.ToArray)
+            End Using
+        Else
+            txt_Text.Text = ReadXMLSpreadSheet()
+        End If
+    End Sub
+
+    Private Sub btn_EditFormats_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btn_EditFormats.ItemClick
+        Dim D As New frm_Formats
+        D.ShowDialog()
     End Sub
 #End Region
 

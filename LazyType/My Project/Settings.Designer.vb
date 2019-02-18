@@ -101,6 +101,30 @@ Namespace My
                 Me("IgnoreSpaces") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("dd-MM-yyyy")>  _
+        Public Property DateFormat() As String
+            Get
+                Return CType(Me("DateFormat"),String)
+            End Get
+            Set
+                Me("DateFormat") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property NumberFormat() As String
+            Get
+                Return CType(Me("NumberFormat"),String)
+            End Get
+            Set
+                Me("NumberFormat") = value
+            End Set
+        End Property
     End Class
 End Namespace
 
