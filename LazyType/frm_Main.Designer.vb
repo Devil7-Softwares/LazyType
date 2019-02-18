@@ -143,6 +143,8 @@ Partial Class frm_Main
         '
         Me.RepositoryItemSpinEdit1.AutoHeight = False
         Me.RepositoryItemSpinEdit1.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.RepositoryItemSpinEdit1.MaxValue = New Decimal(New Integer() {10000, 0, 0, 0})
+        Me.RepositoryItemSpinEdit1.MinValue = New Decimal(New Integer() {50, 0, 0, 0})
         Me.RepositoryItemSpinEdit1.Name = "RepositoryItemSpinEdit1"
         '
         'txt_Wait
@@ -164,6 +166,8 @@ Partial Class frm_Main
         '
         Me.RepositoryItemSpinEdit2.AutoHeight = False
         Me.RepositoryItemSpinEdit2.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.RepositoryItemSpinEdit2.MaxValue = New Decimal(New Integer() {60, 0, 0, 0})
+        Me.RepositoryItemSpinEdit2.MinValue = New Decimal(New Integer() {1, 0, 0, 0})
         Me.RepositoryItemSpinEdit2.Name = "RepositoryItemSpinEdit2"
         '
         'Bar3
