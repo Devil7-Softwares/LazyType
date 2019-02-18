@@ -6,6 +6,7 @@
     Dim MaxChars As Integer
     Dim OldSize As Size
     Dim OldLocation As Point
+    Dim FocusedPID As Integer
 #End Region
 
 #Region "Subs"
@@ -75,12 +76,14 @@
         Else
             frm_Count.Close()
             WaitTimer.Stop()
+
+            FocusedPID = Native.GetFocusedProcessID
             TypeTimer.Start()
         End If
     End Sub
 
     Private Sub TypeTimer_Tick(sender As Object, e As EventArgs) Handles TypeTimer.Tick
-        If Chars2Type.Count > 0 Then
+        If Chars2Type.Count > 0 AndAlso FocusedPID = Native.GetFocusedProcessID Then
             SendKeys.SendWait(Chars2Type(0))
             Chars2Type.RemoveAt(0)
             prog_Status.EditValue = (((MaxChars - Chars2Type.Count) / MaxChars) * 100)
