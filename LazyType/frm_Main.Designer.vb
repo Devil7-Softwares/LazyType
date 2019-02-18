@@ -44,6 +44,7 @@ Partial Class frm_Main
         Me.RepositoryItemSpinEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit()
         Me.txt_Wait = New DevExpress.XtraBars.BarEditItem()
         Me.RepositoryItemSpinEdit2 = New DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit()
+        Me.btn_IgnoreSpaces = New DevExpress.XtraBars.BarToggleSwitchItem()
         Me.Bar3 = New DevExpress.XtraBars.Bar()
         Me.prog_Status = New DevExpress.XtraBars.BarEditItem()
         Me.RepositoryItemProgressBar1 = New DevExpress.XtraEditors.Repository.RepositoryItemProgressBar()
@@ -73,9 +74,9 @@ Partial Class frm_Main
         Me.BarManager1.DockControls.Add(Me.barDockControlLeft)
         Me.BarManager1.DockControls.Add(Me.barDockControlRight)
         Me.BarManager1.Form = Me
-        Me.BarManager1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.btn_Start, Me.btn_Stop, Me.txt_Interval, Me.txt_Wait, Me.prog_Status})
+        Me.BarManager1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.btn_Start, Me.btn_Stop, Me.txt_Interval, Me.txt_Wait, Me.prog_Status, Me.btn_IgnoreSpaces})
         Me.BarManager1.MainMenu = Me.Bar2
-        Me.BarManager1.MaxItemId = 9
+        Me.BarManager1.MaxItemId = 10
         Me.BarManager1.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemTextEdit1, Me.RepositoryItemSpinEdit1, Me.RepositoryItemTextEdit2, Me.RepositoryItemSpinEdit2, Me.RepositoryItemProgressBar1})
         Me.BarManager1.StatusBar = Me.Bar3
         '
@@ -85,7 +86,7 @@ Partial Class frm_Main
         Me.Bar2.DockCol = 0
         Me.Bar2.DockRow = 0
         Me.Bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top
-        Me.Bar2.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.btn_Start), New DevExpress.XtraBars.LinkPersistInfo(Me.btn_Stop), New DevExpress.XtraBars.LinkPersistInfo(Me.txt_Interval, True), New DevExpress.XtraBars.LinkPersistInfo(Me.txt_Wait)})
+        Me.Bar2.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.btn_Start), New DevExpress.XtraBars.LinkPersistInfo(Me.btn_Stop), New DevExpress.XtraBars.LinkPersistInfo(Me.txt_Interval, True), New DevExpress.XtraBars.LinkPersistInfo(Me.txt_Wait), New DevExpress.XtraBars.LinkPersistInfo(Me.btn_IgnoreSpaces, True)})
         Me.Bar2.OptionsBar.AllowQuickCustomization = False
         Me.Bar2.OptionsBar.DrawDragBorder = False
         Me.Bar2.OptionsBar.UseWholeRow = True
@@ -170,6 +171,12 @@ Partial Class frm_Main
         Me.RepositoryItemSpinEdit2.MinValue = New Decimal(New Integer() {1, 0, 0, 0})
         Me.RepositoryItemSpinEdit2.Name = "RepositoryItemSpinEdit2"
         '
+        'btn_IgnoreSpaces
+        '
+        Me.btn_IgnoreSpaces.Caption = "Ignore Spaces"
+        Me.btn_IgnoreSpaces.Id = 9
+        Me.btn_IgnoreSpaces.Name = "btn_IgnoreSpaces"
+        '
         'Bar3
         '
         Me.Bar3.BarName = "Status bar"
@@ -202,7 +209,7 @@ Partial Class frm_Main
         Me.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top
         Me.barDockControlTop.Location = New System.Drawing.Point(0, 0)
         Me.barDockControlTop.Manager = Me.BarManager1
-        Me.barDockControlTop.Size = New System.Drawing.Size(490, 40)
+        Me.barDockControlTop.Size = New System.Drawing.Size(634, 40)
         '
         'barDockControlBottom
         '
@@ -210,7 +217,7 @@ Partial Class frm_Main
         Me.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.barDockControlBottom.Location = New System.Drawing.Point(0, 243)
         Me.barDockControlBottom.Manager = Me.BarManager1
-        Me.barDockControlBottom.Size = New System.Drawing.Size(490, 25)
+        Me.barDockControlBottom.Size = New System.Drawing.Size(634, 25)
         '
         'barDockControlLeft
         '
@@ -224,7 +231,7 @@ Partial Class frm_Main
         '
         Me.barDockControlRight.CausesValidation = False
         Me.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right
-        Me.barDockControlRight.Location = New System.Drawing.Point(490, 40)
+        Me.barDockControlRight.Location = New System.Drawing.Point(634, 40)
         Me.barDockControlRight.Manager = Me.BarManager1
         Me.barDockControlRight.Size = New System.Drawing.Size(0, 203)
         '
@@ -244,7 +251,7 @@ Partial Class frm_Main
         Me.txt_Text.Location = New System.Drawing.Point(0, 40)
         Me.txt_Text.MenuManager = Me.BarManager1
         Me.txt_Text.Name = "txt_Text"
-        Me.txt_Text.Size = New System.Drawing.Size(490, 203)
+        Me.txt_Text.Size = New System.Drawing.Size(634, 203)
         Me.txt_Text.TabIndex = 4
         '
         'TypeTimer
@@ -258,7 +265,7 @@ Partial Class frm_Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(490, 268)
+        Me.ClientSize = New System.Drawing.Size(634, 268)
         Me.Controls.Add(Me.txt_Text)
         Me.Controls.Add(Me.barDockControlLeft)
         Me.Controls.Add(Me.barDockControlRight)
@@ -299,4 +306,5 @@ Partial Class frm_Main
     Friend WithEvents RepositoryItemTextEdit2 As DevExpress.XtraEditors.Repository.RepositoryItemTextEdit
     Friend WithEvents TypeTimer As Timer
     Friend WithEvents WaitTimer As Timer
+    Friend WithEvents btn_IgnoreSpaces As DevExpress.XtraBars.BarToggleSwitchItem
 End Class

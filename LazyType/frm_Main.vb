@@ -43,6 +43,7 @@
     Private Sub frm_Main_Load(sender As Object, e As EventArgs) Handles Me.Load
         txt_Interval.EditValue = My.Settings.Interval
         txt_Wait.EditValue = My.Settings.Wait
+        btn_IgnoreSpaces.Checked = My.Settings.IgnoreSpaces
     End Sub
 #End Region
 
@@ -84,7 +85,9 @@
 
     Private Sub TypeTimer_Tick(sender As Object, e As EventArgs) Handles TypeTimer.Tick
         If Chars2Type.Count > 0 AndAlso FocusedPID = Native.GetFocusedProcessID Then
-            SendKeys.SendWait(Chars2Type(0))
+            If Not (My.Settings.IgnoreSpaces And Chars2Type(0) = " ") Then
+                SendKeys.SendWait(Chars2Type(0))
+            End If
             Chars2Type.RemoveAt(0)
             prog_Status.EditValue = (((MaxChars - Chars2Type.Count) / MaxChars) * 100)
         Else
@@ -104,6 +107,11 @@
 
     Private Sub txt_Text_EditValueChanged(sender As Object, e As EventArgs) Handles txt_Text.EditValueChanged
         btn_Start.Enabled = txt_Text.Text <> ""
+    End Sub
+
+    Private Sub btn_IgnoreSpaces_CheckedChanged(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btn_IgnoreSpaces.CheckedChanged
+        My.Settings.IgnoreSpaces = btn_IgnoreSpaces.Checked
+        My.Settings.Save()
     End Sub
 #End Region
 

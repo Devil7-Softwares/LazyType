@@ -89,6 +89,18 @@ Namespace My
                 Me("Wait") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
+        Public Property IgnoreSpaces() As Boolean
+            Get
+                Return CType(Me("IgnoreSpaces"),Boolean)
+            End Get
+            Set
+                Me("IgnoreSpaces") = value
+            End Set
+        End Property
     End Class
 End Namespace
 
