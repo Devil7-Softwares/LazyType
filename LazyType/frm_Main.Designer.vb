@@ -24,6 +24,18 @@ Partial Class frm_Main
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_Main))
+        Dim SuperToolTip1 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+        Dim ToolTipTitleItem1 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+        Dim ToolTipItem1 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+        Dim SuperToolTip2 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+        Dim ToolTipTitleItem2 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+        Dim ToolTipItem2 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+        Dim SuperToolTip3 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+        Dim ToolTipTitleItem3 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+        Dim ToolTipItem3 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+        Dim SuperToolTip4 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+        Dim ToolTipTitleItem4 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+        Dim ToolTipItem4 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
         Me.BarManager1 = New DevExpress.XtraBars.BarManager(Me.components)
         Me.Bar2 = New DevExpress.XtraBars.Bar()
         Me.btn_Start = New DevExpress.XtraBars.BarLargeButtonItem()
@@ -88,6 +100,12 @@ Partial Class frm_Main
         Me.btn_Start.ImageOptions.Image = CType(resources.GetObject("btn_Start.ImageOptions.Image"), System.Drawing.Image)
         Me.btn_Start.Name = "btn_Start"
         Me.btn_Start.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph
+        ToolTipTitleItem1.Text = "Start"
+        ToolTipItem1.LeftIndent = 6
+        ToolTipItem1.Text = "Start the Typing Process"
+        SuperToolTip1.Items.Add(ToolTipTitleItem1)
+        SuperToolTip1.Items.Add(ToolTipItem1)
+        Me.btn_Start.SuperTip = SuperToolTip1
         '
         'btn_Stop
         '
@@ -98,6 +116,12 @@ Partial Class frm_Main
         Me.btn_Stop.ImageOptions.Image = CType(resources.GetObject("btn_Stop.ImageOptions.Image"), System.Drawing.Image)
         Me.btn_Stop.Name = "btn_Stop"
         Me.btn_Stop.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph
+        ToolTipTitleItem2.Text = "Stop"
+        ToolTipItem2.LeftIndent = 6
+        ToolTipItem2.Text = "Stop the Typing Process"
+        SuperToolTip2.Items.Add(ToolTipTitleItem2)
+        SuperToolTip2.Items.Add(ToolTipItem2)
+        Me.btn_Stop.SuperTip = SuperToolTip2
         '
         'txt_Interval
         '
@@ -107,6 +131,13 @@ Partial Class frm_Main
         Me.txt_Interval.Id = 4
         Me.txt_Interval.Name = "txt_Interval"
         Me.txt_Interval.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph
+        ToolTipTitleItem3.Text = "Interval"
+        ToolTipItem3.LeftIndent = 6
+        ToolTipItem3.Text = "The Interval Between Entering Charecters in Milliseconds (1000 Milliseconds = 1 S" &
+    "econd)"
+        SuperToolTip3.Items.Add(ToolTipTitleItem3)
+        SuperToolTip3.Items.Add(ToolTipItem3)
+        Me.txt_Interval.SuperTip = SuperToolTip3
         '
         'RepositoryItemSpinEdit1
         '
@@ -122,6 +153,12 @@ Partial Class frm_Main
         Me.txt_Wait.Id = 6
         Me.txt_Wait.Name = "txt_Wait"
         Me.txt_Wait.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph
+        ToolTipTitleItem4.Text = "Initial Wait"
+        ToolTipItem4.LeftIndent = 6
+        ToolTipItem4.Text = "Seconds to Wait After Clicking the Start Button"
+        SuperToolTip4.Items.Add(ToolTipTitleItem4)
+        SuperToolTip4.Items.Add(ToolTipItem4)
+        Me.txt_Wait.SuperTip = SuperToolTip4
         '
         'RepositoryItemSpinEdit2
         '
