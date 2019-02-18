@@ -8,11 +8,11 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("LazyType")>
-<Assembly: AssemblyDescription("")>
-<Assembly: AssemblyCompany("")>
-<Assembly: AssemblyProduct("LazyType")>
-<Assembly: AssemblyCopyright("Copyright ©  2019")>
+<Assembly: AssemblyTitle("Devil7 - LazyType")>
+<Assembly: AssemblyDescription("A Tool that Emulates Keyboard Strokes from Given Text Charecter By Charecter. Usefull in Places Where Pasting is not Allowed & You Need to Paste Large Amount Of Data.")>
+<Assembly: AssemblyCompany("Devil7 Softwares")>
+<Assembly: AssemblyProduct("Devil7 - Automation")>
+<Assembly: AssemblyCopyright("Copyright © Devil7 Softwares 2019")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>

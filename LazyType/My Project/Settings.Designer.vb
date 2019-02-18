@@ -136,9 +136,9 @@ Namespace My
     Friend Module MySettingsProperty
         
         <Global.System.ComponentModel.Design.HelpKeywordAttribute("My.Settings")>  _
-        Friend ReadOnly Property Settings() As Global.LazyType.My.MySettings
+        Friend ReadOnly Property Settings() As Global.Devil7.Automation.LazyType.My.MySettings
             Get
-                Return Global.LazyType.My.MySettings.Default
+                Return Global.Devil7.Automation.LazyType.My.MySettings.Default
             End Get
         End Property
     End Module
