@@ -65,6 +65,30 @@ Namespace My
                 Me("Skin") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("100")>  _
+        Public Property Interval() As Integer
+            Get
+                Return CType(Me("Interval"),Integer)
+            End Get
+            Set
+                Me("Interval") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("5")>  _
+        Public Property Wait() As Integer
+            Get
+                Return CType(Me("Wait"),Integer)
+            End Get
+            Set
+                Me("Wait") = value
+            End Set
+        End Property
     End Class
 End Namespace
 
