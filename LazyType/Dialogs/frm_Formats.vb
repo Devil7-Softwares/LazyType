@@ -33,6 +33,8 @@ Public Class frm_Formats
         My.Settings.DateFormat = txt_DateFormat.Text
         My.Settings.NumberFormat = txt_NumberFormat.Text
         My.Settings.Save()
+        DialogResult = DialogResult.OK
+        Close()
     End Sub
 #End Region
 
