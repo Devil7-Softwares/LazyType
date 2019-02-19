@@ -40,6 +40,9 @@ Public Class frm_Main
         txt_Text.Enabled = True
         txt_Interval.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
         txt_Wait.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+        btn_IgnoreSpaces.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+        btn_PasteExcel.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+        btn_EditFormats.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
         ControlBox = True
         Size = OldSize
         TopMost = False
@@ -55,6 +58,9 @@ Public Class frm_Main
         txt_Text.Enabled = False
         txt_Interval.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
         txt_Wait.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+        btn_IgnoreSpaces.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+        btn_PasteExcel.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+        btn_EditFormats.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
         ControlBox = False
         Size = New Size(180, 98)
         TopMost = True
