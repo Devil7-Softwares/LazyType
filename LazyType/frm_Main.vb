@@ -161,9 +161,14 @@ Public Class frm_Main
     Private Sub TypeTimer_Tick(sender As Object, e As EventArgs) Handles TypeTimer.Tick
         If Chars2Type.Count > 0 AndAlso FocusedPID = Native.GetFocusedProcessID Then
             If Not (My.Settings.IgnoreSpaces And Chars2Type(0) = " ") Then
-                SendKeys.SendWait(Chars2Type(0))
+                Dim SpecialChars As Char() = "(){}+^".ToArray
+                If SpecialChars.Contains(Chars2Type(0)) Then
+                    SendKeys.Send("{" & Chars2Type(0) & "}")
+                Else
+                    SendKeys.SendWait(Chars2Type(0))
+                End If
             End If
-            Chars2Type.RemoveAt(0)
+                Chars2Type.RemoveAt(0)
             prog_Status.EditValue = (((MaxChars - Chars2Type.Count) / MaxChars) * 100)
         Else
             EnableControls()
