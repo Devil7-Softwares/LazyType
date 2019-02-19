@@ -24,18 +24,18 @@ Partial Class frm_Main
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_Main))
+        Dim SuperToolTip1 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+        Dim ToolTipTitleItem1 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+        Dim ToolTipItem1 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+        Dim SuperToolTip2 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+        Dim ToolTipTitleItem2 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+        Dim ToolTipItem2 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+        Dim SuperToolTip3 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+        Dim ToolTipTitleItem3 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+        Dim ToolTipItem3 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
         Dim SuperToolTip4 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
         Dim ToolTipTitleItem4 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
         Dim ToolTipItem4 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-        Dim SuperToolTip8 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-        Dim ToolTipTitleItem8 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-        Dim ToolTipItem8 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-        Dim SuperToolTip9 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-        Dim ToolTipTitleItem9 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-        Dim ToolTipItem9 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-        Dim SuperToolTip7 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-        Dim ToolTipTitleItem7 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-        Dim ToolTipItem7 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
         Me.BarManager1 = New DevExpress.XtraBars.BarManager(Me.components)
         Me.Bar2 = New DevExpress.XtraBars.Bar()
         Me.btn_Start = New DevExpress.XtraBars.BarLargeButtonItem()
@@ -103,12 +103,12 @@ Partial Class frm_Main
         Me.btn_Start.ImageOptions.Image = CType(resources.GetObject("btn_Start.ImageOptions.Image"), System.Drawing.Image)
         Me.btn_Start.Name = "btn_Start"
         Me.btn_Start.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph
-        ToolTipTitleItem4.Text = "Start"
-        ToolTipItem4.LeftIndent = 6
-        ToolTipItem4.Text = "Start the Typing Process"
-        SuperToolTip4.Items.Add(ToolTipTitleItem4)
-        SuperToolTip4.Items.Add(ToolTipItem4)
-        Me.btn_Start.SuperTip = SuperToolTip4
+        ToolTipTitleItem1.Text = "Start"
+        ToolTipItem1.LeftIndent = 6
+        ToolTipItem1.Text = "Start the Typing Process"
+        SuperToolTip1.Items.Add(ToolTipTitleItem1)
+        SuperToolTip1.Items.Add(ToolTipItem1)
+        Me.btn_Start.SuperTip = SuperToolTip1
         '
         'btn_Stop
         '
@@ -119,12 +119,12 @@ Partial Class frm_Main
         Me.btn_Stop.ImageOptions.Image = CType(resources.GetObject("btn_Stop.ImageOptions.Image"), System.Drawing.Image)
         Me.btn_Stop.Name = "btn_Stop"
         Me.btn_Stop.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph
-        ToolTipTitleItem8.Text = "Stop"
-        ToolTipItem8.LeftIndent = 6
-        ToolTipItem8.Text = "Stop the Typing Process"
-        SuperToolTip8.Items.Add(ToolTipTitleItem8)
-        SuperToolTip8.Items.Add(ToolTipItem8)
-        Me.btn_Stop.SuperTip = SuperToolTip8
+        ToolTipTitleItem2.Text = "Stop"
+        ToolTipItem2.LeftIndent = 6
+        ToolTipItem2.Text = "Stop the Typing Process"
+        SuperToolTip2.Items.Add(ToolTipTitleItem2)
+        SuperToolTip2.Items.Add(ToolTipItem2)
+        Me.btn_Stop.SuperTip = SuperToolTip2
         '
         'txt_Interval
         '
@@ -134,20 +134,20 @@ Partial Class frm_Main
         Me.txt_Interval.Id = 4
         Me.txt_Interval.Name = "txt_Interval"
         Me.txt_Interval.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph
-        ToolTipTitleItem9.Text = "Interval"
-        ToolTipItem9.LeftIndent = 6
-        ToolTipItem9.Text = "The Interval Between Entering Charecters in Milliseconds (1000 Milliseconds = 1 S" &
+        ToolTipTitleItem3.Text = "Interval"
+        ToolTipItem3.LeftIndent = 6
+        ToolTipItem3.Text = "The Interval Between Entering Charecters in Milliseconds (1000 Milliseconds = 1 S" &
     "econd)"
-        SuperToolTip9.Items.Add(ToolTipTitleItem9)
-        SuperToolTip9.Items.Add(ToolTipItem9)
-        Me.txt_Interval.SuperTip = SuperToolTip9
+        SuperToolTip3.Items.Add(ToolTipTitleItem3)
+        SuperToolTip3.Items.Add(ToolTipItem3)
+        Me.txt_Interval.SuperTip = SuperToolTip3
         '
         'RepositoryItemSpinEdit1
         '
         Me.RepositoryItemSpinEdit1.AutoHeight = False
         Me.RepositoryItemSpinEdit1.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.RepositoryItemSpinEdit1.MaxValue = New Decimal(New Integer() {10000, 0, 0, 0})
-        Me.RepositoryItemSpinEdit1.MinValue = New Decimal(New Integer() {50, 0, 0, 0})
+        Me.RepositoryItemSpinEdit1.MinValue = New Decimal(New Integer() {10, 0, 0, 0})
         Me.RepositoryItemSpinEdit1.Name = "RepositoryItemSpinEdit1"
         '
         'txt_Wait
@@ -158,12 +158,12 @@ Partial Class frm_Main
         Me.txt_Wait.Id = 6
         Me.txt_Wait.Name = "txt_Wait"
         Me.txt_Wait.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph
-        ToolTipTitleItem7.Text = "Initial Wait"
-        ToolTipItem7.LeftIndent = 6
-        ToolTipItem7.Text = "Seconds to Wait After Clicking the Start Button"
-        SuperToolTip7.Items.Add(ToolTipTitleItem7)
-        SuperToolTip7.Items.Add(ToolTipItem7)
-        Me.txt_Wait.SuperTip = SuperToolTip7
+        ToolTipTitleItem4.Text = "Initial Wait"
+        ToolTipItem4.LeftIndent = 6
+        ToolTipItem4.Text = "Seconds to Wait After Clicking the Start Button"
+        SuperToolTip4.Items.Add(ToolTipTitleItem4)
+        SuperToolTip4.Items.Add(ToolTipItem4)
+        Me.txt_Wait.SuperTip = SuperToolTip4
         '
         'RepositoryItemSpinEdit2
         '
